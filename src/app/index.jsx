@@ -4,7 +4,10 @@ import { render } from 'react-dom';
 // components
 import SearchForm from './components/Form.jsx'
 
-const tag = '[App.jsx]'
+// models
+import SearchModel from './models/SearchModel.js'
+
+const tag = '[App]'
 
 class App extends React.Component {
   constructor(props) {
@@ -31,6 +34,13 @@ class App extends React.Component {
   handleSubmit (query) {
     console.log(tag, 'handleSubmit()', query)
     this.setState({ query })
+    this.search(query)
+  }
+  search (query) {
+    return SearchModel.list(query)
+      .then(documents => {
+        console.log(tag, 'search', documents)
+      })
   }
 }
 
