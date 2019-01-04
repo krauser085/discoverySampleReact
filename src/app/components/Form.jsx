@@ -25,15 +25,16 @@ class Form extends Component {
       </form >
     )
   }
-  handleChange(e) {
-    this.setState({value: e.target.value})
+  handleChange (e) {
+    this.setState({ value: e.target.value })
     if (!e.target.value) this.handleReset()
   }
-  handleSubmit(e) {
+  handleSubmit (e) {
     e.preventDefault()
     console.log(tag, 'handleSubmit()', this.state.value)
+    this.props.handleSubmit(this.state.value)
   }
-  handleReset() {
+  handleReset () {
     console.log(tag, 'handleReset()')
   }
 }
