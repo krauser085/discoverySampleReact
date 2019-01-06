@@ -19,6 +19,7 @@ class App extends React.Component {
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleReset = this.handleReset.bind(this)
   }
   render () {
     return (
@@ -27,13 +28,21 @@ class App extends React.Component {
           <h2 className="g_container">Search Documents</h2>
         </header>
         <div class="g_container">
-          <SearchForm handleSubmit={this.handleSubmit} />
+          <SearchForm
+            handleReset={this.handleReset}
+            handleSubmit={this.handleSubmit} />
           <List documents={this.state.documents}
             query={this.state.query}
             submitted={this.state.submitted} />
         </div >
       </div >
     )
+  }
+  handleReset() {
+    console.log(tag, 'handleReset()')
+    this.setState({ query: '' })
+    this.setState({ submitted: false })
+    this.setState({ documents: [] })
   }
   handleSubmit (query) {
     console.log(tag, 'handleSubmit()', query)

@@ -36,6 +36,7 @@ class Form extends Component {
   }
   handleReset () {
     console.log(tag, 'handleReset()')
+    this.props.handleReset()
   }
 }
 
