@@ -1,0 +1,14 @@
+ul {
+  margin-bottom: 15px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px 5px 15px;
+
+    hr {
+      width: 100%;
+      border-bottom: 1px #ccc solid;
+    }
+  }
+}
