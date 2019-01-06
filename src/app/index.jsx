@@ -1,5 +1,5 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
 
 // components
 import SearchForm from './components/Form.jsx'
@@ -33,7 +33,7 @@ class App extends React.Component {
             submitted={this.state.submitted} />
         </div >
       </div >
-    );
+    )
   }
   handleSubmit (query) {
     console.log(tag, 'handleSubmit()', query)
@@ -48,4 +48,4 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('app'))

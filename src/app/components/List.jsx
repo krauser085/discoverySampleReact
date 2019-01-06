@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // style
 import '../../scss/components/list.scss'
@@ -44,4 +44,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Form
