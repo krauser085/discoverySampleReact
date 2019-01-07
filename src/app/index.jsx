@@ -30,7 +30,7 @@ class App extends React.Component {
         <header>
           <h2 className="_container">Search Documents</h2>
         </header>
-        <div class="_container">
+        <div className="_container">
           <SearchForm
             handleReset={this.handleReset}
             handleSubmit={this.handleSubmit} />
