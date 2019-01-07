@@ -13,7 +13,7 @@ class Form extends Component {
   }
   render () {
     return this.props.documents.length ? (
-      <div className="g_border">
+      <div className="_border">
         <ul>
           {this.renderList()}
         </ul>

@@ -1,7 +1,0 @@
- body, ul {
-  margin: 0;
-  padding: 0;
-}
-ul { list-style: none; }
-.g_container { margin: 0 15px 0 15px; }
-.g_border { border: 1px #ccc solid; }
