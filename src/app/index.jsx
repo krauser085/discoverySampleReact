@@ -8,6 +8,9 @@ import List from './components/List.jsx'
 // models
 import SearchModel from './models/SearchModel.js'
 
+// Style
+import '../scss/global.scss'
+
 const tag = '[App]'
 
 class App extends React.Component {
@@ -25,9 +28,9 @@ class App extends React.Component {
     return (
       <div>
         <header>
-          <h2 className="g_container">Search Documents</h2>
+          <h2 className="_container">Search Documents</h2>
         </header>
-        <div class="g_container">
+        <div className="_container">
           <SearchForm
             handleReset={this.handleReset}
             handleSubmit={this.handleSubmit} />

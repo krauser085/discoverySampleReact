@@ -17,7 +17,7 @@ class Form extends Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" className="g_border"
+        <input type="text" className="_border"
           onChange={this.handleChange}
           placeholder="検索文を入力して下さい"
         ></input>
