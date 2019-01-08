@@ -11,14 +11,13 @@ var config = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : false,
   entry: APP_DIR + '/index.jsx',
-  watch: true,
   output: {
     path: BUILD_DIR,
     filename: "client.min.js"
   },
 
   module : {
-    loaders : [
+    rules : [
       {
         test: /\.(jpe?g|png|gif)$/i,   //to support eg. background-image property
         loader:"file-loader",
@@ -40,8 +39,8 @@ var config = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'env', 'stage-0'],
-          plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties'],
+          presets: ['@babel/react', '@babel/env'],
+          plugins: ['react-html-attrs'],
         }
       },{
         test: /\.scss$/,
